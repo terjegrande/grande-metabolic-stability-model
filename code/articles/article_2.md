@@ -30,6 +30,7 @@ Denne artikkelen beskriver den matematiske kjernen i friksjonsmodellen.
 
 
 
+
 ## 2.1 U‑formet friksjon
 
 2. S(t) som dynamisk tilstand
