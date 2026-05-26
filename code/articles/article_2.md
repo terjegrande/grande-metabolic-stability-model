@@ -26,12 +26,13 @@ Denne artikkelen beskriver den matematiske kjernen i friksjonsmodellen.
 
 
 
+## 2.1 U‑formet friksjon
+
+
+
 ![Figure 2.1 – U‑formet friksjon](../notebooks/figures/article_2/figure_2_1_friction_U.png)
 
 
-
-
-## 2.1 U‑formet friksjon
 
 2. S(t) som dynamisk tilstand
 S(t) representerer kroppens metabolske tilstand som en kontinuerlig funksjon over tid.
