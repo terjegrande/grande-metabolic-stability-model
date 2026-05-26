@@ -35,6 +35,7 @@ Denne artikkelen beskriver den matematiske kjernen i friksjonsmodellen.
 
 
 
+
 2. S(t) som dynamisk tilstand
 S(t) representerer kroppens metabolske tilstand som en kontinuerlig funksjon over tid.
 
