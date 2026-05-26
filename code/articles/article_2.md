@@ -29,8 +29,8 @@ Denne artikkelen beskriver den matematiske kjernen i friksjonsmodellen.
 ## 2.1 U‑formet friksjon
 
 
-
 ![Figure 2.1 – U‑formet friksjon](../notebooks/figures/article_2/figure_2_1_friction_U.png)
+
 
 
 
