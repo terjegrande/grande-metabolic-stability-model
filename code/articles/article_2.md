@@ -1,6 +1,9 @@
 Artikkel 2 — Friksjon som metabolsk stabilisator i S(t)-modellen
 (GitHub‑optimalisert versjon — Markdown)
 
+
+
+
 1. Introduksjon
 Metabolsk friksjon er den manglende variabelen i klassiske modeller for metabolsk regulering.
 Friksjon beskriver motstanden i systemet — hvor vanskelig eller lett det er for kroppen å endre metabolsk tilstand S(t).
@@ -20,6 +23,14 @@ respons på stress
 energiregulering
 
 Denne artikkelen beskriver den matematiske kjernen i friksjonsmodellen.
+
+
+
+![Figure 2.1 – U‑formet friksjon](../notebooks/figures/article_2/figure_2_1_friction_U.png)
+
+
+
+## 2.1 U‑formet friksjon
 
 2. S(t) som dynamisk tilstand
 S(t) representerer kroppens metabolske tilstand som en kontinuerlig funksjon over tid.
@@ -99,7 +110,11 @@ ekstremt høy friksjon ved lang faste
 Dette gir fleksibilitet i simuleringene.
 
 6. Pseudokode for friksjonsmodellen
+
+
 Dette er en GitHub‑klar pseudokode‑blokk som viser hvordan S(t) oppdateres:
+
+
 
 Code
 Initialize S = S0
@@ -109,7 +124,7 @@ For each timestep t:
     dS = (I(t) - S) / F(t)
     S = S + dS * dt
 Return S over time
-7. Modellering av friksjon
+8. Modellering av friksjon
 U‑formet friksjon
 Code
 F(t) = a * (x - x0)^2 + b
@@ -119,7 +134,7 @@ F(t) = a * (x - x0)^2 + c * (x - x0) + b
 J‑formet friksjon
 Code
 F(t) = b + a * exp(k * (x - x0))
-8. Praktisk implikasjon
+9. Praktisk implikasjon
 To personer kan spise samme måltid, men få helt ulik respons fordi friksjonen er forskjellig:
 
 høy friksjon → stabil respons
