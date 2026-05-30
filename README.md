@@ -64,6 +64,12 @@ Dette rammeverket brukes i alle artiklene og notebookene.
 ## 📊 Figurer og data
 
 Alle figurer generert fra notebookene lagres i:
+data/figures/
+
+Rådata og prosesserte data ligger i:
+
+data/raw/
+data/processed/
 
 
 ## 📁 Mappestruktur
