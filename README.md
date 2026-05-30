@@ -67,7 +67,6 @@ Alle figurer generert fra notebookene lagres i:
 data/figures/
 
 Rådata og prosesserte data ligger i:
-
 data/raw/
 data/processed/
 
