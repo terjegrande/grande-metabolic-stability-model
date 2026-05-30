@@ -1,6 +1,8 @@
-# Artikkel 0 — Introduksjon til Metabolsk Stabilitet
+# Artikkel 0 — Introduksjon til Metabolsk Stabilitet: et friksjonsbasert rammeverk
 Denne artikkelen gir en samlet introduksjon til prosjektets teoretiske rammeverk, inkludert friksjonsmodellen, kontrollsløyfer, faseoverganger og det nye ζ–L–S‑rammeverket. Artikkelen fungerer som en masteroversikt for hele serien (Artikkel 0–5).
 
+Abstract:  
+Biologiske systemer opprettholder stabilitet gjennom et samspill mellom metabolsk friksjon, regulerende kontrollsløyfer og faseoverganger mellom ulike tilstandssoner. I denne artikkelen introduseres ζ–L–S‑rammeverket, som beskriver hvordan friksjon (ζ), kontroll (L) og stabilitet (S) sammen bestemmer systemets respons på belastning. Modellen skiller mellom baseline‑, adaptiv og stress‑indusert friksjon, og integrerer negative, positive og feedforward‑kontrollsløyfer som regulerer både friksjon og metabolsk aktivitet. Videre beskrives overganger mellom stabil, metastabil, kritisk og kollapssone, samt hvordan hysterese, separatrix‑grenser og recovery‑baner kan analyseres innenfor samme struktur. Artikkelen etablerer det teoretiske fundamentet for resten av serien (Artikkel 1–5), som utdyper friksjonsmodellen, kontrollsystemer, faseoverganger, kliniske implikasjoner og fremtidige anvendelser innen personlig medisin og AI‑basert metabolsk overvåkning.
 ---
 
 ## 1. Bakgrunn
