@@ -38,6 +38,34 @@ Notebookene ligger i `notebooks/` og genererer alle figurer, simuleringer og ana
 
 ---
 
+---
+
+## 🧠 Teoretisk rammeverk
+
+Modellen bygger på tre hovedkomponenter:
+
+### **ζ — Friksjon**
+Motstand mot endring, både baseline, adaptiv og stress‑indusert.
+
+### **L — Kontroll**
+Feedback‑ og feedforward‑mekanismer som regulerer friksjon og metabolsk aktivitet.
+
+### **S — Stabilitet**
+Systemets faktiske tilstand, inkludert:
+- stabil sone  
+- metastabil sone  
+- kritisk sone  
+- kollapssone  
+
+Dette rammeverket brukes i alle artiklene og notebookene.
+
+---
+
+## 📊 Figurer og data
+
+Alle figurer generert fra notebookene lagres i:
+
+
 ## 📁 Mappestruktur
 
 Repoet følger en profesjonell forskningsstruktur:
