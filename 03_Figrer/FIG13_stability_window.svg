@@ -1,0 +1,136 @@
+<svg width="1200" height="850" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Title -->
+  <text x="50%" y="50" font-size="28" text-anchor="middle" font-family="Arial">
+    Figur 13 – Stability Window
+  </text>
+
+  <!-- Axes -->
+  <line x1="150" y1="700" x2="1050" y2="700" stroke="black" stroke-width="2"/>
+  <line x1="150" y1="150" x2="150" y2="700" stroke="black" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="600" y="740" font-size="20" text-anchor="middle" font-family="Arial">
+    ζ (Friksjon / Instabilitet)
+  </text>
+  <text x="110" y="425" font-size="20" text-anchor="middle" font-family="Arial" transform="rotate(-90 110,425)">
+    L, S (Kapasitet / Stabilitet)
+  </text>
+
+  <!-- Zones: green (stable), yellow (pre-instability), red (collapse) -->
+  <!-- Green stable zone -->
+  <rect x="150" y="250" width="350" height="450" fill="rgba(0,180,0,0.18)" stroke="none"/>
+  <text x="325" y="280" font-size="18" text-anchor="middle" font-family="Arial" fill="darkgreen">
+    Stabilt vindu
+  </text>
+  <text x="325" y="305" font-size="14" text-anchor="middle" font-family="Arial" fill="darkgreen">
+    Lav ζ, høy L/S
+  </text>
+
+  <!-- Yellow pre-instability zone -->
+  <rect x="500" y="300" width="300" height="400" fill="rgba(255,215,0,0.22)" stroke="none"/>
+  <text x="650" y="330" font-size="18" text-anchor="middle" font-family="Arial" fill="#b8860b">
+    Pre‑instabil sone
+  </text>
+  <text x="650" y="355" font-size="14" text-anchor="middle" font-family="Arial" fill="#b8860b">
+    Økt ζ, fallende L/S
+  </text>
+
+  <!-- Red collapse zone -->
+  <rect x="800" y="350" width="250" height="350" fill="rgba(220,0,0,0.20)" stroke="none"/>
+  <text x="925" y="380" font-size="18" text-anchor="middle" font-family="Arial" fill="darkred">
+    Kollaps‑sone
+  </text>
+  <text x="925" y="405" font-size="14" text-anchor="middle" font-family="Arial" fill="darkred">
+    Høy ζ, lav L/S
+  </text>
+
+  <!-- Safe operating envelope contour -->
+  <rect x="180" y="280" width="290" height="390"
+        fill="none" stroke="green" stroke-width="3" stroke-dasharray="8,6"/>
+  <text x="325" y="690" font-size="16" text-anchor="middle" font-family="Arial" fill="green">
+    Safe operating envelope
+  </text>
+
+  <!-- Example system states (points) -->
+  <!-- Point A: healthy stable -->
+  <circle cx="260" cy="360" r="7" fill="green"/>
+  <text x="275" y="355" font-size="16" font-family="Arial" fill="green">A</text>
+  <text x="260" y="385" font-size="14" text-anchor="middle" font-family="Arial" fill="green">
+    Stabil
+  </text>
+
+  <!-- Point B: pre-instability -->
+  <circle cx="580" cy="420" r="7" fill="#b8860b"/>
+  <text x="595" y="415" font-size="16" font-family="Arial" fill="#b8860b">B</text>
+  <text x="580" y="445" font-size="14" text-anchor="middle" font-family="Arial" fill="#b8860b">
+    Pre‑instabil
+  </text>
+
+  <!-- Point C: collapse -->
+  <circle cx="880" cy="520" r="7" fill="darkred"/>
+  <text x="895" y="515" font-size="16" font-family="Arial" fill="darkred">C</text>
+  <text x="880" y="545" font-size="14" text-anchor="middle" font-family="Arial" fill="darkred">
+    Kollaps
+  </text>
+
+  <!-- Trajectory arrows A -> B -> C -->
+  <defs>
+    <marker id="arrowBlack" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="black"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="blue"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="green"/>
+    </marker>
+  </defs>
+
+  <!-- Deterioration path (A -> B -> C) -->
+  <path d="M260 360 C 360 380, 480 400, 580 420
+           C 700 450, 800 490, 880 520"
+        stroke="black" stroke-width="3" fill="none" marker-end="url(#arrowBlack)"/>
+  <text x="520" y="390" font-size="16" font-family="Arial" fill="black">
+    Økende ζ, fallende L/S
+  </text>
+
+  <!-- Recovery path (C -> tilbake mot A, men via pre-instability) -->
+  <path d="M880 520 C 760 470, 640 440, 540 430
+           C 430 420, 330 400, 260 380"
+        stroke="blue" stroke-width="3" fill="none" stroke-dasharray="8,6" marker-end="url(#arrowBlue)"/>
+  <text x="700" y="455" font-size="16" font-family="Arial" fill="blue">
+    Recovery‑bane (MPC, tiltak)
+  </text>
+
+  <!-- Arrows showing control directions -->
+  <!-- Arrow for reducing ζ (leftwards) -->
+  <line x1="700" y1="650" x2="600" y2="650" stroke="blue" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="650" y="675" font-size="14" text-anchor="middle" font-family="Arial" fill="blue">
+    Tiltak: ζ↓ (friksjon ned)
+  </text>
+
+  <!-- Arrow for increasing L/S (upwards) -->
+  <line x1="220" y1="620" x2="220" y2="520" stroke="green" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <text x="220" y="640" font-size="14" text-anchor="middle" font-family="Arial" fill="green">
+    Tiltak: L/S↑ (kapasitet opp)
+  </text>
+
+  <!-- Legend -->
+  <rect x="780" y="180" width="330" height="140" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="795" y="200" width="25" height="15" fill="rgba(0,180,0,0.18)" stroke="green" stroke-width="1"/>
+  <text x="830" y="212" font-size="14" font-family="Arial">Stabilt vindu</text>
+
+  <rect x="795" y="225" width="25" height="15" fill="rgba(255,215,0,0.22)" stroke="#b8860b" stroke-width="1"/>
+  <text x="830" y="237" font-size="14" font-family="Arial">Pre‑instabil sone</text>
+
+  <rect x="795" y="250" width="25" height="15" fill="rgba(220,0,0,0.20)" stroke="darkred" stroke-width="1"/>
+  <text x="830" y="262" font-size="14" font-family="Arial">Kollaps‑sone</text>
+
+  <line x1="795" y1="280" x2="820" y2="280" stroke="black" stroke-width="3"/>
+  <text x="830" y="284" font-size="14" font-family="Arial">Forverring (A → B → C)</text>
+
+  <line x1="795" y1="305" x2="820" y2="305" stroke="blue" stroke-width="3" stroke-dasharray="8,6"/>
+  <text x="830" y="309" font-size="14" font-family="Arial">Recovery‑bane (kontroll / MPC)</text>
+
+</svg>

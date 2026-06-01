@@ -1,0 +1,51 @@
+<svg width="1300" height="950" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Title -->
+  <text x="50%" y="60" font-size="30" text-anchor="middle" font-family="Arial">
+    Figur 15 – MPC‑Flow (detaljert)
+  </text>
+
+  <!-- SENSOR INPUT -->
+  <rect x="80" y="180" width="220" height="120" fill="white" stroke="black" stroke-width="3"/>
+  <text x="190" y="215" font-size="20" text-anchor="middle" font-family="Arial">Sensorer</text>
+  <text x="190" y="245" font-size="14" text-anchor="middle" font-family="Arial">HRV • HR • Temp • Stress</text>
+
+  <!-- Arrow to Fusion -->
+  <line x1="300" y1="240" x2="360" y2="240" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- SENSOR FUSION -->
+  <rect x="360" y="180" width="240" height="120" fill="white" stroke="black" stroke-width="3"/>
+  <text x="480" y="215" font-size="20" text-anchor="middle" font-family="Arial">Sensor Fusion</text>
+  <text x="480" y="245" font-size="14" text-anchor="middle" font-family="Arial">Filtrering • Normalisering</text>
+
+  <!-- Arrow to State Estimation -->
+  <line x1="600" y1="240" x2="660" y2="240" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- STATE ESTIMATION -->
+  <rect x="660" y="180" width="260" height="120" fill="white" stroke="black" stroke-width="3"/>
+  <text x="790" y="215" font-size="20" text-anchor="middle" font-family="Arial">State Estimation</text>
+  <text x="790" y="245" font-size="14" text-anchor="middle" font-family="Arial">ζ(t), L(t), S(t)</text>
+
+  <!-- Arrow to Prediction -->
+  <line x1="790" y1="300" x2="790" y2="360" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- PREDICTION MODEL -->
+  <rect x="600" y="360" width="380" height="140" fill="white" stroke="black" stroke-width="3"/>
+  <text x="790" y="400" font-size="22" text-anchor="middle" font-family="Arial">Prediksjonsmodell</text>
+  <text x="790" y="430" font-size="14" text-anchor="middle" font-family="Arial">Simulerer ζ, L, S over horisont</text>
+  <text x="790" y="450" font-size="14" text-anchor="middle" font-family="Arial">24–72 timer</text>
+
+  <!-- Arrow to Cost Function -->
+  <line x1="790" y1="500" x2="790" y2="560" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- COST FUNCTION -->
+  <rect x="600" y="560" width="380" height="160" fill="white" stroke="black" stroke-width="3"/>
+  <text x="790" y="600" font-size="22" text-anchor="middle" font-family="Arial">Kostfunksjon J</text>
+  <text x="790" y="630" font-size="14" text-anchor="middle" font-family="Arial">
+    J = w₁·ζ + w₂·Aepi + w₃·ΔL + w₄·ΔS
+  </text>
+  <text x="790" y="655" font-size="14" text-anchor="middle" font-family="Arial">
+    Minimerer risiko og instabilitet
+  </text>
+
+  <!-- Arrow to Optimization -->

@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <!-- Background -->
+  <rect x="0" y="0" width="900" height="520" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="20" fill="#111111">
+    Figur 17 – Multi-Horizon Prediction
+  </text>
+
+  <!-- Axes -->
+  <line x1="80" y1="440" x2="820" y2="440" stroke="#222222" stroke-width="1.4"/>
+  <line x1="80" y1="80"  x2="80"  y2="440" stroke="#222222" stroke-width="1.4"/>
+
+  <!-- Axis labels -->
+  <text x="450" y="470" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="14" fill="#111111">
+    Tid (dager)
+  </text>
+  <text x="30" y="260" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="14" fill="#111111" transform="rotate(-90 30 260)">
+    Systemstabilitet ζ(t)
+  </text>
+
+  <!-- Y ticks and grid -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#444444">
+    <!-- 1.0 -->
+    <line x1="80" y1="110" x2="820" y2="110" stroke="#e5e5e5" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="70" y="114" text-anchor="end">1.0</text>
+    <!-- 0.8 -->
+    <line x1="80" y1="170" x2="820" y2="170" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="70" y="174" text-anchor="end">0.8</text>
+    <!-- 0.6 -->
+    <line x1="80" y1="230" x2="820" y2="230" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="70" y="234" text-anchor="end">0.6</text>
+    <!-- 0.4 -->
+    <line x1="80" y1="290" x2="820" y2="290" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="70" y="294" text-anchor="end">0.4</text>
+    <!-- 0.2 -->
+    <line x1="80" y1="350" x2="820" y2="350" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="70" y="354" text-anchor="end">0.2</text>
+    <!-- 0.0 -->
+    <line x1="80" y1="410" x2="820" y2="410" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="70" y="414" text-anchor="end">0.0</text>
+  </g>
+
+  <!-- X ticks and labels (0, 1, 7, 30, 180) -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#444444">
+    <!-- 0 -->
+    <line x1="100" y1="440" x2="100" y2="445" stroke="#222222" stroke-width="1"/>
+    <text x="100" y="458" text-anchor="middle">0</text>
+
+    <!-- 1 -->
+    <line x1="150" y1="440" x2="150" y2="445" stroke="#222222" stroke-width="1"/>
+    <text x="150" y="458" text-anchor="middle">1</text>
+
+    <!-- 7 -->
+    <line x1="230" y1="440" x2="230" y2="445" stroke="#222222" stroke-width="1"/>
+    <text x="230" y="458" text-anchor="middle">7</text>
+
+    <!-- 30 -->
+    <line x1="360" y1="440" x2="360" y2="445" stroke="#222222" stroke-width="1"/>
+    <text x="360" y="458" text-anchor="middle">30</text>
+
+    <!-- 180 -->
+    <line x1="780" y1="440" x2="780" y2="445" stroke="#222222" stroke-width="1"/>
+    <text x="780" y="458" text-anchor="middle">180</text>
+  </g>
+
+  <!-- Horizon vertical lines with labels -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#333333">
+    <!-- 1-day horizon -->
+    <line x1="150" y1="90" x2="150" y2="440" stroke="#bbbbbb" stroke-width="1.2" stroke-dasharray="6 4"/>
+    <text x="150" y="90" text-anchor="middle">1 dag</text>
+
+    <!-- 7-day horizon -->
+    <line x1="230" y1="90" x2="230" y2="440" stroke="#bbbbbb" stroke-width="1.2" stroke-dasharray="6 4"/>
+    <text x="230" y="90" text-anchor="middle">7 dager</text>
+
+    <!-- 30-day horizon -->
+    <line x1="360" y1="90" x2="360" y2="440" stroke="#bbbbbb" stroke-width="1.2" stroke-dasharray="6 4"/>
+    <text x="360" y="90" text-anchor="middle">30 dager</text>
+
+    <!-- 180-day horizon -->
+    <line x1="780" y1="90" x2="780" y2="440" stroke="#bbbbbb" stroke-width="1.2" stroke-dasharray="6 4"/>
+    <text x="780" y="90" text-anchor="middle">180 dager</text>
+  </g>
+
+  <!-- Uncertainty band: no intervention (red, semi-transparent) -->
+  <path d="
+    M 100 210
+    C 180 250, 260 310, 360 360
+    C 480 390, 620 410, 780 420
+    L 780 390
+    C 620 380, 480 360, 360 330
+    C 260 290, 180 240, 100 200
+    Z"
+    fill="#f8c4c4" stroke="none" opacity="0.8"/>
+
+  <!-- Uncertainty band: MPC intervention (blue, semi-transparent) -->
+  <path d="
+    M 100 210
+    C 180 205, 260 200, 360 195
+    C 480 190, 620 188, 780 186
+    L 780 205
+    C 620 207, 480 210, 360 215
+    C 260 220, 180 225, 100 230
+    Z"
+    fill="#c4d9f8" stroke="none" opacity="0.9"/>
+
+  <!-- Trajectory: no intervention (red) -->
+  <path d="
+    M 100 205
+    C 180 245, 260 300, 360 345
+    C 480 375, 620 395, 780 405"
+    fill="none" stroke="#d62828" stroke-width="2.4"/>
+
+  <!-- Trajectory: MPC intervention (blue) -->
+  <path d="
+    M 100 205
+    C 180 202, 260 198, 360 195
+    C 480 192, 620 190, 780 189"
+    fill="none" stroke="#1d4ed8" stroke-width="2.6"/>
+
+  <!-- Intervention marker (start of control) -->
+  <circle cx="150" cy="205" r="4" fill="#1d4ed8"/>
+  <text x="160" y="195" font-family="Helvetica, Arial, sans-serif" font-size="11"
+        fill="#1d4ed8">
+    Start MPC-intervensjon
+  </text>
+
+  <!-- Collapse risk region (bottom band) -->
+  <rect x="80" y="360" width="740" height="80" fill="#fef0f0"/>
+  <line x1="80" y1="360" x2="820" y2="360" stroke="#f4b4b4" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="790" y="352" text-anchor="end" font-family="Helvetica, Arial, sans-serif"
+        font-size="11" fill="#c53030">
+    Høy kollapsrisiko
+  </text>
+
+  <!-- Safe / target band (top band) -->
+  <rect x="80" y="90" width="740" height="60" fill="#ecfdf3"/>
+  <line x1="80" y1="150" x2="820" y2="150" stroke="#4ade80" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="790" y="145" text-anchor="end" font-family="Helvetica, Arial, sans-serif"
+        font-size="11" fill="#15803d">
+    Stabilt målområde
+  </text>
+
+  <!-- Legend -->
+  <rect x="520" y="300" width="260" height="120" fill="#ffffff" stroke="#dddddd" stroke-width="1"/>
+  <text x="535" y="322" font-family="Helvetica, Arial, sans-serif" font-size="12"
+        fill="#111111">
+    Prediksjonsbaner og usikkerhet
+  </text>
+
+  <!-- Legend items -->
+  <!-- No intervention line -->
+  <line x1="535" y1="340" x2="555" y2="340" stroke="#d62828" stroke-width="2.4"/>
+  <text x="565" y="344" font-family="Helvetica, Arial, sans-serif" font-size="11"
+        fill="#333333">
+    Uten intervensjon
+  </text>
+
+  <!-- MPC line -->
+  <line x1="535" y1="360" x2="555" y2="360" stroke="#1d4ed8" stroke-width="2.6"/>
+  <text x="565" y="364" font-family="Helvetica, Arial, sans-serif" font-size="11"
+        fill="#333333">
+    Med MPC-intervensjon
+  </text>
+
+  <!-- Red band -->
+  <rect x="535" y="372" width="18" height="8" fill="#f8c4c4"/>
+  <text x="565" y="380" font-family="Helvetica, Arial, sans-serif" font-size="11"
+        fill="#333333">
+    Usikkerhetsbånd (uten intervensjon)
+  </text>
+
+  <!-- Blue band -->
+  <rect x="535" y="392" width="18" height="8" fill="#c4d9f8"/>
+  <text x="565" y="400" font-family="Helvetica, Arial, sans-serif" font-size="11"
+        fill="#333333">
+    Usikkerhetsbånd (MPC-styrt bane)
+  </text>
+
+  <!-- Caption -->
+  <text x="80" y="495" font-family="Helvetica, Arial, sans-serif" font-size="12"
+        fill="#444444">
+    Multi-horisont prediksjon av systemstabilitet ζ(t) med og uten MPC-intervensjon (1, 7, 30 og 180 dager).
+  </text>
+</svg>

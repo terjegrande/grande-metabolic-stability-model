@@ -1,0 +1,104 @@
+<svg width="1200" height="850" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Title -->
+  <text x="50%" y="50" font-size="28" text-anchor="middle" font-family="Arial">
+    Figur 12 – Recovery Debt
+  </text>
+
+  <!-- Axes -->
+  <line x1="150" y1="700" x2="1050" y2="700" stroke="black" stroke-width="2"/>
+  <line x1="150" y1="150" x2="150" y2="700" stroke="black" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="600" y="740" font-size="20" text-anchor="middle" font-family="Arial">
+    Tid
+  </text>
+  <text x="110" y="425" font-size="20" text-anchor="middle" font-family="Arial" transform="rotate(-90 110,425)">
+    Kapasitet / Stabilitet (L, S)
+  </text>
+
+  <!-- Stable capacity curve (target / reference) -->
+  <path d="M150 300 C 350 280, 650 270, 1050 260"
+        stroke="green" stroke-width="3" fill="none"/>
+  <text x="900" y="250" font-size="18" font-family="Arial" fill="green">
+    Stabil kapasitet (referanse)
+  </text>
+
+  <!-- Actual capacity curve (collapse then slow recovery) -->
+  <path d="M150 300
+           C 300 350, 450 450, 600 550
+           C 750 520, 880 480, 1050 430"
+        stroke="black" stroke-width="3" fill="none"/>
+  <text x="750" y="520" font-size="18" font-family="Arial" fill="black">
+    Faktisk kapasitet
+  </text>
+
+  <!-- Recovery debt shading (area between curves) -->
+  <path d="M150 300
+           C 300 350, 450 450, 600 550
+           C 750 520, 880 480, 1050 430
+           L 1050 260
+           C 650 270, 350 280, 150 300 Z"
+        fill="rgba(255,0,0,0.12)" stroke="none"/>
+  <text x="450" y="380" font-size="18" font-family="Arial" fill="darkred">
+    Recovery debt
+  </text>
+
+  <!-- Vertical marker: collapse event -->
+  <line x1="450" y1="150" x2="450" y2="700" stroke="grey" stroke-width="1" stroke-dasharray="6,6"/>
+  <text x="450" y="140" font-size="16" text-anchor="middle" font-family="Arial" fill="grey">
+    Kollaps / sjokk
+  </text>
+
+  <!-- Vertical marker: intervention start -->
+  <line x1="650" y1="150" x2="650" y2="700" stroke="grey" stroke-width="1" stroke-dasharray="6,6"/>
+  <text x="650" y="140" font-size="16" text-anchor="middle" font-family="Arial" fill="grey">
+    Start strukturert recovery
+  </text>
+
+  <!-- Intervention phases (friction first, then capacity) -->
+  <text x="520" y="650" font-size="16" font-family="Arial" fill="blue">
+    Fase 1: Redusere friksjon (ζ↓)
+  </text>
+  <text x="780" y="620" font-size="16" font-family="Arial" fill="blue">
+    Fase 2: Øke kapasitet (L, S↑)
+  </text>
+
+  <!-- Arrows indicating direction of recovery -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="blue"/>
+    </marker>
+    <marker id="arrowBlack" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="black"/>
+    </marker>
+  </defs>
+
+  <!-- Arrow along actual capacity curve (recovery direction) -->
+  <path d="M600 550 C 720 520, 880 480, 1000 450"
+        stroke="blue" stroke-width="3" fill="none" marker-end="url(#arrowBlue)"/>
+
+  <text x="640" y="510" font-size="16" font-family="Arial" fill="blue">
+    Recovery‑bane
+  </text>
+
+  <!-- Hysteresis annotation -->
+  <text x="260" y="330" font-size="16" font-family="Arial" fill="black">
+    Veien ned ≠ veien opp
+  </text>
+  <text x="260" y="350" font-size="16" font-family="Arial" fill="black">
+    Hysterese og gjeld
+  </text>
+
+  <!-- Legend box -->
+  <rect x="780" y="520" width="330" height="120" fill="white" stroke="black" stroke-width="1"/>
+  <line x1="800" y1="550" x2="840" y2="550" stroke="green" stroke-width="3"/>
+  <text x="850" y="555" font-size="16" font-family="Arial">Stabil kapasitet (mål)</text>
+
+  <line x1="800" y1="580" x2="840" y2="580" stroke="black" stroke-width="3"/>
+  <text x="850" y="585" font-size="16" font-family="Arial">Faktisk kapasitet</text>
+
+  <rect x="800" y="600" width="40" height="15" fill="rgba(255,0,0,0.12)" stroke="red" stroke-width="1"/>
+  <text x="850" y="612" font-size="16" font-family="Arial">Recovery debt (integrert gap)</text>
+
+</svg>

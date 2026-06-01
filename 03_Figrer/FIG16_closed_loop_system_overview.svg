@@ -1,0 +1,80 @@
+<svg width="1400" height="900" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Title -->
+  <text x="50%" y="60" font-size="32" text-anchor="middle" font-family="Arial">
+    Figur 16 – Closed‑Loop System Overview
+  </text>
+
+  <!-- SENSOR BLOCK -->
+  <rect x="100" y="350" width="220" height="140" fill="white" stroke="black" stroke-width="3"/>
+  <text x="210" y="390" font-size="22" text-anchor="middle" font-family="Arial">Sensorer</text>
+  <text x="210" y="420" font-size="14" text-anchor="middle" font-family="Arial">HRV • HR • Temp • Stress</text>
+
+  <!-- Arrow to Fusion -->
+  <line x1="320" y1="420" x2="400" y2="420" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- STATE ESTIMATION -->
+  <rect x="400" y="350" width="240" height="140" fill="white" stroke="black" stroke-width="3"/>
+  <text x="520" y="390" font-size="22" text-anchor="middle" font-family="Arial">State Estimation</text>
+  <text x="520" y="420" font-size="14" text-anchor="middle" font-family="Arial">ζ(t), L(t), S(t)</text>
+
+  <!-- Arrow to Digital Twin -->
+  <line x1="640" y1="420" x2="720" y2="420" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- DIGITAL TWIN -->
+  <rect x="720" y="350" width="260" height="140" fill="white" stroke="black" stroke-width="3"/>
+  <text x="850" y="390" font-size="22" text-anchor="middle" font-family="Arial">Digital Twin</text>
+  <text x="850" y="420" font-size="14" text-anchor="middle" font-family="Arial">Prediksjon av ζ, L, S</text>
+
+  <!-- Arrow to Aepi -->
+  <line x1="850" y1="490" x2="850" y2="560" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- AEPI -->
+  <rect x="720" y="560" width="260" height="140" fill="white" stroke="black" stroke-width="3"/>
+  <text x="850" y="600" font-size="22" text-anchor="middle" font-family="Arial">Aepi‑beregning</text>
+  <text x="850" y="630" font-size="14" text-anchor="middle" font-family="Arial">Risiko • Stabilitet</text>
+
+  <!-- Arrow to MPC -->
+  <line x1="850" y1="700" x2="850" y2="770" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- MPC -->
+  <rect x="600" y="770" width="500" height="160" fill="white" stroke="black" stroke-width="3"/>
+  <text x="850" y="810" font-size="26" text-anchor="middle" font-family="Arial">MPC‑kontroller</text>
+  <text x="850" y="845" font-size="14" text-anchor="middle" font-family="Arial">
+    Optimal handling u(t) under constraints
+  </text>
+
+  <!-- Arrow to Safety -->
+  <line x1="1100" y1="850" x2="1180" y2="850" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- SAFETY -->
+  <rect x="1180" y="770" width="200" height="160" fill="white" stroke="black" stroke-width="3"/>
+  <text x="1280" y="810" font-size="22" text-anchor="middle" font-family="Arial">Safety‑modul</text>
+  <text x="1280" y="840" font-size="14" text-anchor="middle" font-family="Arial">Validerer u(t)</text>
+
+  <!-- Arrow to Interventions -->
+  <line x1="1280" y1="770" x2="1280" y2="690" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- INTERVENTIONS -->
+  <rect x="1120" y="550" width="320" height="120" fill="white" stroke="black" stroke-width="3"/>
+  <text x="1280" y="590" font-size="22" text-anchor="middle" font-family="Arial">Intervensjoner</text>
+  <text x="1280" y="620" font-size="14" text-anchor="middle" font-family="Arial">
+    ζ↓ • L↑ • S↑
+  </text>
+
+  <!-- Arrow back to sensors -->
+  <line x1="1280" y1="550" x2="1280" y2="300" stroke="black" stroke-width="2"/>
+  <line x1="1280" y1="300" x2="210" y2="300" stroke="black" stroke-width="2" marker-end="url(#arrowBlack)"/>
+
+  <text x="750" y="280" font-size="14" text-anchor="middle" font-family="Arial">
+    Closed‑loop kontinuerlig oppdatering
+  </text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowBlack" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="black"/>
+    </marker>
+  </defs>
+
+</svg>

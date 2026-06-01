@@ -1,0 +1,98 @@
+<svg width="1300" height="900" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Title -->
+  <text x="50%" y="60" font-size="30" text-anchor="middle" font-family="Arial">
+    Figur 14 – MPC Intervensjonskart
+  </text>
+
+  <!-- SENSOR BLOCK -->
+  <rect x="80" y="200" width="220" height="140" fill="white" stroke="black" stroke-width="3"/>
+  <text x="190" y="235" font-size="20" text-anchor="middle" font-family="Arial">Sensorer</text>
+  <text x="190" y="265" font-size="14" text-anchor="middle" font-family="Arial">HRV • HR • Temp •</text>
+  <text x="190" y="285" font-size="14" text-anchor="middle" font-family="Arial">Søvn • Aktivitet • Stress</text>
+
+  <!-- Arrow to Fusion -->
+  <line x1="300" y1="270" x2="360" y2="270" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- SENSOR FUSION -->
+  <rect x="360" y="200" width="220" height="140" fill="white" stroke="black" stroke-width="3"/>
+  <text x="470" y="235" font-size="20" text-anchor="middle" font-family="Arial">Sensor Fusion</text>
+  <text x="470" y="265" font-size="14" text-anchor="middle" font-family="Arial">Filtrering • Normalisering</text>
+  <text x="470" y="285" font-size="14" text-anchor="middle" font-family="Arial">Feature‑ekstraksjon</text>
+
+  <!-- Arrow to Twin -->
+  <line x1="580" y1="270" x2="640" y2="270" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- DIGITAL TWIN -->
+  <rect x="640" y="200" width="240" height="140" fill="white" stroke="black" stroke-width="3"/>
+  <text x="760" y="235" font-size="20" text-anchor="middle" font-family="Arial">Digital Twin</text>
+  <text x="760" y="265" font-size="14" text-anchor="middle" font-family="Arial">ζ(t), L(t), S(t)</text>
+  <text x="760" y="285" font-size="14" text-anchor="middle" font-family="Arial">Prediksjon 24–72h</text>
+
+  <!-- Arrow to Aepi -->
+  <line x1="880" y1="270" x2="940" y2="270" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- AEPI BLOCK -->
+  <rect x="940" y="200" width="240" height="140" fill="white" stroke="black" stroke-width="3"/>
+  <text x="1060" y="235" font-size="20" text-anchor="middle" font-family="Arial">Aepi‑beregning</text>
+  <text x="1060" y="265" font-size="14" text-anchor="middle" font-family="Arial">Aepi(t) = f(ζ, L, S)</text>
+  <text x="1060" y="285" font-size="14" text-anchor="middle" font-family="Arial">Risiko • Stabilitet</text>
+
+  <!-- Down arrow to MPC -->
+  <line x1="1060" y1="340" x2="1060" y2="420" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- MPC BLOCK -->
+  <rect x="840" y="420" width="440" height="180" fill="white" stroke="black" stroke-width="3"/>
+  <text x="1060" y="460" font-size="24" text-anchor="middle" font-family="Arial">MPC‑kontroller</text>
+  <text x="1060" y="495" font-size="14" text-anchor="middle" font-family="Arial">
+    Kostfunksjon J = w₁·ζ + w₂·Aepi + w₃·ΔL + w₄·ΔS
+  </text>
+  <text x="1060" y="520" font-size="14" text-anchor="middle" font-family="Arial">
+    Prediksjonshorisont • Optimal handling
+  </text>
+
+  <!-- Arrow to Intervention Selector -->
+  <line x1="840" y1="510" x2="760" y2="510" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- INTERVENTION SELECTOR -->
+  <rect x="420" y="420" width="340" height="180" fill="white" stroke="black" stroke-width="3"/>
+  <text x="590" y="460" font-size="22" text-anchor="middle" font-family="Arial">Intervensjons‑velger</text>
+  <text x="590" y="495" font-size="14" text-anchor="middle" font-family="Arial">
+    Prioritering: ζ↓ → L↑ → S↑
+  </text>
+  <text x="590" y="520" font-size="14" text-anchor="middle" font-family="Arial">
+    Sekvensiell optimalisering
+  </text>
+
+  <!-- Arrows to intervention types -->
+  <line x1="590" y1="600" x2="590" y2="660" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- INTERVENTION TYPES -->
+  <rect x="300" y="660" width="580" height="160" fill="white" stroke="black" stroke-width="3"/>
+  <text x="590" y="700" font-size="22" text-anchor="middle" font-family="Arial">Intervensjoner</text>
+
+  <text x="350" y="740" font-size="14" font-family="Arial">• Friksjonsreduksjon (ζ↓)</text>
+  <text x="350" y="765" font-size="14" font-family="Arial">• Stress / autonomi</text>
+
+  <text x="550" y="740" font-size="14" font-family="Arial">• Kapasitetsøkning (L↑)</text>
+  <text x="550" y="765" font-size="14" font-family="Arial">• Mitokondrier / CL / MGI</text>
+
+  <text x="780" y="740" font-size="14" font-family="Arial">• Systemstabilitet (S↑)</text>
+  <text x="780" y="765" font-size="14" font-family="Arial">• Søvn • Ernæring • Belastning</text>
+
+  <!-- Arrow to User -->
+  <line x1="590" y1="820" x2="590" y2="880" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <!-- USER OUTPUT -->
+  <text x="590" y="910" font-size="20" text-anchor="middle" font-family="Arial">
+    Output til bruker: anbefalinger, tiltak, plan
+  </text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowBlack" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="black"/>
+    </marker>
+  </defs>
+
+</svg>

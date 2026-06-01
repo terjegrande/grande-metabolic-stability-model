@@ -1,0 +1,50 @@
+<svg width="1200" height="850" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Title -->
+  <text x="50%" y="50" font-size="28" text-anchor="middle" font-family="Arial">
+    Figur 11 – Phase‑Space Dynamics
+  </text>
+
+  <!-- Axes -->
+  <line x1="150" y1="700" x2="1050" y2="700" stroke="black" stroke-width="2"/>
+  <line x1="150" y1="150" x2="150" y2="700" stroke="black" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="600" y="740" font-size="20" text-anchor="middle" font-family="Arial">ζ (Friction / Instability)</text>
+  <text x="110" y="425" font-size="20" text-anchor="middle" font-family="Arial" transform="rotate(-90 110,425)">L, S (Capacity / Stability)</text>
+
+  <!-- Separatrix curve -->
+  <path d="M150 650 C 400 500, 700 350, 1050 250"
+        stroke="red" stroke-width="3" fill="none"/>
+  <text x="900" y="260" font-size="18" font-family="Arial" fill="red">Separatrix</text>
+
+  <!-- Stable basin shading -->
+  <path d="M150 700 L150 650 C400 500, 700 350, 1050 250 L1050 700 Z"
+        fill="rgba(0,150,0,0.12)" stroke="none"/>
+  <text x="350" y="600" font-size="18" font-family="Arial" fill="green">Stable Basin</text>
+
+  <!-- Collapse basin shading -->
+  <path d="M150 700 L1050 700 L1050 250 C700 350, 400 500, 150 650 Z"
+        fill="rgba(200,0,0,0.12)" stroke="none"/>
+  <text x="800" y="650" font-size="18" font-family="Arial" fill="darkred">Collapse Basin</text>
+
+  <!-- Recovery trajectory -->
+  <path d="M900 650 C 750 550, 600 500, 450 450 C 350 400, 250 350, 200 300"
+        stroke="blue" stroke-width="3" fill="none" stroke-dasharray="8,6"/>
+  <text x="500" y="480" font-size="18" font-family="Arial" fill="blue">Recovery Path</text>
+
+  <!-- Collapse trajectory -->
+  <path d="M300 300 C 450 400, 650 500, 900 650"
+        stroke="black" stroke-width="3" fill="none" stroke-dasharray="4,4"/>
+  <text x="700" y="550" font-size="18" font-family="Arial" fill="black">Collapse Path</text>
+
+  <!-- Hysteresis arrow -->
+  <line x1="450" y1="450" x2="300" y2="300" stroke="blue" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <line x1="300" y1="300" x2="900" y2="650" stroke="black" stroke-width="3" marker-end="url(#arrowBlack)"/>
+
+  <text x="350" y="350" font-size="16" font-family="Arial" fill="blue">Recovery ≠ Collapse</text>
+  <text x="350" y="370" font-size="16" font-family="Arial" fill="blue">Hysteresis</text>
+
+  <!-- Markers -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
