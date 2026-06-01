@@ -1,38 +1,49 @@
 # FIGURE INDEX
 
-Dette dokumentet gir en oversikt over alle figurer i prosjektet,
-med både filnavn og kort beskrivelse.
+## Figur 1 – System Overview
+– Hovedarkitektur, noder, sensorer, friksjonsmodell
 
----
+## Figur 2 – Predicted Dynamic Signatures
+– Hysterese, collapse/recovery‑baner
 
-## FIG01_zls_framework.svg
-Z–L–S rammeverket (ζ, L, S). Grunnfiguren for hele modellen.
+## Figur 3 – State Machine
+– High/Transitional/Low Friction, terskler, piler
 
-## FIG02_twin_dynamics.svg
-Twin‑dynamikk over tid. Viser ζ(t), L(t), S(t) og prediksjon via Digital Twin.
+## Figur 4 – Time‑Course Simulation
+– ζ(t), L(t), S(t), intervensjonspunkter
 
-## FIG03_mpc_loop.svg
-MPC‑sløyfen: State → Prediction → Cost → Optimize → Action → Safety → State.
+## Figur 5 – Node 1–3 Dynamics
+– Energi, ROS, mitokondriell friksjon
 
-## FIG04_sensor_fusion.svg
-Sensorer og datakilder: wearables, blodprøver, miljødata, søvn, ernæring, telefon.
-Går inn i Sensor Fusion → Digital Twin.
+## Figur 6 – Node 4–7 Dynamics
+– Systemisk kapasitet, vev, organer, funksjon
 
----
+## Figur 7 – Threshold Architecture
+– ζ*, ζ_low, ζ_high, stabilitetsgrenser
 
-## Navnestandard for nye figurer
+## Figur 8 – Intervention Classes
+– Farmakologisk, atferd, ernæring, MPC‑styring
 
-Bruk formatet:
+## Figur 9 – Sensor Integration
+– Wearables, blodmarkører, modellinput
 
-FIGxx_beskrivelse.svg
+## Figur 10 – Control Loop (MPC)
+– Prediksjon → optimalisering → handling → feedback
 
-Eksempler:
+## Figur 11 – Phase‑Space Dynamics
+– Separatrix, stabilitetsbassenger, recovery vs. collapse
 
-FIG05_aepi_computation.svg  
-FIG06_control_surface.svg  
-FIG07_system_architecture.svg  
-FIG08_intervention_map.svg  
+## Figur 12 – Recovery Debt
+– Kapasitet vs. stabil kapasitet, areal som gjeld, hysterese
 
----
+## Figur 13 – Stability Window
+– Grønn/gul/rød sone, safe operating envelope, ζ–L–S‑relasjoner
 
-Oppdater denne filen hver gang du legger til en ny figur.
+## Figur 14 – MPC / Intervensjonskart
+– (kommer)
+
+## Figur 15 – (ledig)
+
+## Figur 16 – (ledig)
+
+## Figur 17 – (kommer)
