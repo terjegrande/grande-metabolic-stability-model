@@ -1,0 +1,50 @@
+<svg width="720" height="480" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Title -->
+  <text x="50%" y="40" font-size="22" text-anchor="middle" font-family="Arial">
+    Figur 2 – Twin‑dynamikk (ζ–L–S)
+  </text>
+
+  <!-- ζ(t) curve -->
+  <path d="M 80 360 
+           C 150 300, 220 260, 300 240
+           C 360 225, 420 260, 480 200" 
+        stroke="#0000ff" stroke-width="3" fill="none"/>
+  <text x="70" y="370" font-size="16" fill="#0000ff">ζ(t)</text>
+
+  <!-- L(t) curve -->
+  <path d="M 80 300
+           C 160 260, 240 240, 300 260
+           C 360 280, 420 330, 480 310"
+        stroke="#008000" stroke-width="3" fill="none"/>
+  <text x="70" y="310" font-size="16" fill="#008000">L(t)</text>
+
+  <!-- S(t) curve -->
+  <path d="M 80 200
+           C 160 180, 240 150, 300 160
+           C 360 170, 420 190, 480 150"
+        stroke="#ffa500" stroke-width="3" fill="none"/>
+  <text x="70" y="210" font-size="16" fill="#ffa500">S(t)</text>
+
+  <!-- Twin block -->
+  <rect x="260" y="60" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+  <text x="360" y="100" font-size="18" text-anchor="middle">Digital Twin</text>
+  <text x="360" y="120" font-size="14" text-anchor="middle">Prediksjon av S(t+1)</text>
+
+  <!-- Arrows from curves to Twin -->
+  <line x1="300" y1="240" x2="300" y2="140" stroke="#0000ff" stroke-width="2"/>
+  <line x1="300" y1="260" x2="300" y2="140" stroke="#008000" stroke-width="2"/>
+  <line x1="300" y1="160" x2="300" y2="140" stroke="#ffa500" stroke-width="2"/>
+
+  <!-- Arrow from Twin to future S -->
+  <line x1="460" y1="100" x2="560" y2="100" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="565" y="105" font-size="14">S(t+1)</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="black"/>
+    </marker>
+  </defs>
+
+</svg>
