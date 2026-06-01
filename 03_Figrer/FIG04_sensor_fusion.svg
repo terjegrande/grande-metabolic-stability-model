@@ -1,0 +1,90 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Title -->
+  <text x="50%" y="40" font-size="26" text-anchor="middle" font-family="Arial">
+    Figur 4 – Sensorer og datakilder
+  </text>
+
+  <!-- Sensor Fusion Engine -->
+  <rect x="350" y="240" width="220" height="120" fill="white" stroke="black" stroke-width="2"/>
+  <text x="460" y="285" font-size="20" text-anchor="middle">Sensor Fusion</text>
+  <text x="460" y="310" font-size="14" text-anchor="middle">Adaptive vekting + filtrering</text>
+
+  <!-- Digital Twin -->
+  <rect x="350" y="420" width="220" height="100" fill="white" stroke="black" stroke-width="2"/>
+  <text x="460" y="460" font-size="20" text-anchor="middle">Digital Twin</text>
+  <text x="460" y="485" font-size="14" text-anchor="middle">Prediksjon av S(t+1), ζ(t+1), L(t+1)</text>
+
+  <!-- Arrow: Fusion → Twin -->
+  <line x1="460" y1="360" x2="460" y2="420" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- SENSOR GROUPS -->
+
+  <!-- Wearables -->
+  <rect x="60" y="120" width="200" height="80" fill="white" stroke="#0000ff" stroke-width="2"/>
+  <text x="160" y="150" font-size="18" text-anchor="middle" fill="#0000ff">Wearables</text>
+  <text x="160" y="170" font-size="12" text-anchor="middle" fill="#0000ff">
+    HRV, puls, respirasjon, aktivitet
+  </text>
+
+  <!-- Arrow Wearables → Fusion -->
+  <line x1="260" y1="160" x2="350" y2="260" stroke="#0000ff" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Blodprøver -->
+  <rect x="60" y="260" width="200" height="80" fill="white" stroke="#008000" stroke-width="2"/>
+  <text x="160" y="290" font-size="18" text-anchor="middle" fill="#008000">Blodprøver</text>
+  <text x="160" y="310" font-size="12" text-anchor="middle" fill="#008000">
+    Homocystein, glukose, lipider
+  </text>
+
+  <!-- Arrow Blood → Fusion -->
+  <line x1="260" y1="300" x2="350" y2="300" stroke="#008000" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Miljødata -->
+  <rect x="60" y="400" width="200" height="80" fill="white" stroke="#ffa500" stroke-width="2"/>
+  <text x="160" y="430" font-size="18" text-anchor="middle" fill="#ffa500">Miljødata</text>
+  <text x="160" y="450" font-size="12" text-anchor="middle" fill="#ffa500">
+    Temperatur, luftkvalitet, lys
+  </text>
+
+  <!-- Arrow Environment → Fusion -->
+  <line x1="260" y1="440" x2="350" y2="320" stroke="#ffa500" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Telefon-sensorer -->
+  <rect x="640" y="120" width="200" height="80" fill="white" stroke="#6a0dad" stroke-width="2"/>
+  <text x="740" y="150" font-size="18" text-anchor="middle" fill="#6a0dad">Telefon-sensorer</text>
+  <text x="740" y="170" font-size="12" text-anchor="middle" fill="#6a0dad">
+    GPS, akselerometer, skjermbruk
+  </text>
+
+  <!-- Arrow Phone → Fusion -->
+  <line x1="640" y1="160" x2="570" y2="260" stroke="#6a0dad" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Søvn -->
+  <rect x="640" y="260" width="200" height="80" fill="white" stroke="#ff1493" stroke-width="2"/>
+  <text x="740" y="290" font-size="18" text-anchor="middle" fill="#ff1493">Søvn</text>
+  <text x="740" y="310" font-size="12" text-anchor="middle" fill="#ff1493">
+    Søvnstadier, varighet, kvalitet
+  </text>
+
+  <!-- Arrow Sleep → Fusion -->
+  <line x1="640" y1="300" x2="570" y2="300" stroke="#ff1493" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Ernæring -->
+  <rect x="640" y="400" width="200" height="80" fill="white" stroke="#c71585" stroke-width="2"/>
+  <text x="740" y="430" font-size="18" text-anchor="middle" fill="#c71585">Ernæring</text>
+  <text x="740" y="450" font-size="12" text-anchor="middle" fill="#c71585">
+    Måltider, timing, makroer
+  </text>
+
+  <!-- Arrow Nutrition → Fusion -->
+  <line x1="640" y1="440" x2="570" y2="320" stroke="#c71585" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="black"/>
+    </marker>
+  </defs>
+
+</svg>
