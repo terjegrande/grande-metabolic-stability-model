@@ -40,10 +40,17 @@
 – Grønn/gul/rød sone, safe operating envelope, ζ–L–S‑relasjoner
 
 ## Figur 14 – MPC / Intervensjonskart
-– (kommer)
 
-## Figur 15 – (ledig)
 
-## Figur 16 – (ledig)
+## Figur 15 –  MPC‑Flow 
 
-## Figur 17 – (kommer)
+## Figur 16 – Closed‑Loop System Overview
+
+## Figur 17 – Multi‑Horizon Prediction
+– 1/7/30/180‑dagers prediksjon, usikkerhetsbånd, MPC vs. ingen intervensjon
+
+## Figur 18 – MPC Action Space
+– Tillatte og forbudte intervensjoner per kanal og intensitet, MPC‑valgte tiltak
+
+
+
